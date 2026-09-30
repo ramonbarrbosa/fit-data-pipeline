@@ -1,0 +1,4 @@
+Package                      Version
+---------------------------- -----------
+dbt-postgres                 1.11.0
+pandas                       3.0.6

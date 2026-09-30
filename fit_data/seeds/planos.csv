@@ -1,0 +1,5 @@
+plano_id,nome_plano,valor_mensal,duracao_meses,descricao
+1,Plano Mensal Bronze,119.9,1,Acesso ilimitado à musculação em horário livre.
+2,Plano Trimestral Prata,99.9,3,Acesso à musculação e aulas coletivas.
+3,Plano Anual Ouro,79.9,12,"Acesso total, musculação, aulas e direito a 1 acompanhante no mês."
+4,Plano VIP Black,149.9,12,"Acesso a todas as unidades, armário exclusivo e avaliação física mensal."

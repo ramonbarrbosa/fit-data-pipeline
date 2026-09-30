@@ -1,0 +1,77 @@
+[0m17:04:10.158192 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb0055c5e80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb00739cf50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb003caf890>]}
+
+
+============================== 17:04:10.162275 | 42867ee9-7c59-4b69-88c9-3f94846bbfb2 ==============================
+[0m17:04:10.162275 [info ] [MainThread]: Running with dbt=1.12.5
+[0m17:04:10.162731 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'log_path': 'logs', 'quiet': 'False', 'use_experimental_parser': 'False', 'warn_error': 'None', 'no_print': 'None', 'profiles_dir': '/home/rlbarbosa/.dbt', 'use_colors': 'True', 'log_cache_events': 'False', 'introspect': 'True', 'empty': 'None', 'printer_width': '80', 'cache_selected_only': 'False', 'write_json': 'True', 'maximum_seed_size_mib': '1', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'static_parser': 'True', 'version_check': 'True', 'target_path': 'None', 'hints_enabled': 'True', 'invocation_command': 'dbt init', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'partial_parse': 'True', 'debug': 'False'}
+[0m17:04:56.044510 [debug] [MainThread]: Starter project path: /home/rlbarbosa/Documents/Projects/fit-data-pipeline/.venv/lib64/python3.14/site-packages/dbt/include/starter_project
+[0m17:04:56.053693 [info ] [MainThread]: Setting up your profile.
+[0m17:07:32.373122 [info ] [MainThread]: Profile fit_data written to /home/rlbarbosa/.dbt/profiles.yml using target's profile_template.yml and your supplied values.
+[0m17:07:32.378512 [info ] [MainThread]: Running dbt debug to validate the project...
+[0m17:07:32.379526 [info ] [MainThread]: dbt version: 1.12.5
+[0m17:07:32.380148 [info ] [MainThread]: python version: 3.14.7
+[0m17:07:32.380764 [info ] [MainThread]: python path: /home/rlbarbosa/Documents/Projects/fit-data-pipeline/.venv/bin/python3
+[0m17:07:32.381381 [info ] [MainThread]: os info: Linux-7.2.7-200.fc44.x86_64-x86_64-with-glibc2.43
+[0m17:07:32.425211 [info ] [MainThread]: Using profiles dir at /home/rlbarbosa/.dbt
+[0m17:07:32.426031 [info ] [MainThread]: Using profiles.yml file at /home/rlbarbosa/.dbt/profiles.yml
+[0m17:07:32.426672 [info ] [MainThread]: Using dbt_project.yml file at /home/rlbarbosa/Documents/Projects/fit-data-pipeline/fit_data/dbt_project.yml
+[0m17:07:32.427681 [info ] [MainThread]: adapter type: postgres
+[0m17:07:32.428201 [info ] [MainThread]: adapter version: 1.11.0
+[0m17:07:32.605242 [info ] [MainThread]: Configuration:
+[0m17:07:32.606132 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:07:32.606796 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m17:07:32.607560 [info ] [MainThread]: Required dependencies:
+[0m17:07:32.611031 [debug] [MainThread]: Executing "git --help"
+[0m17:07:32.619471 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m17:07:32.620316 [debug] [MainThread]: STDERR: "b''"
+[0m17:07:32.620843 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:07:32.621431 [info ] [MainThread]: Connection:
+[0m17:07:32.622043 [info ] [MainThread]:   host: dpg-dattglu7bikc738ktv10-a.ohio-postgres.render.com
+[0m17:07:32.623075 [info ] [MainThread]:   port: 5432
+[0m17:07:32.623918 [info ] [MainThread]:   user: dbt_postgres_ycuy_user
+[0m17:07:32.624537 [info ] [MainThread]:   database: dbt_postgres_ycuy
+[0m17:07:32.625111 [info ] [MainThread]:   schema: public
+[0m17:07:32.625757 [info ] [MainThread]:   connect_timeout: 10
+[0m17:07:32.626390 [info ] [MainThread]:   role: None
+[0m17:07:32.627040 [info ] [MainThread]:   search_path: None
+[0m17:07:32.627873 [info ] [MainThread]:   keepalives_idle: 0
+[0m17:07:32.628688 [info ] [MainThread]:   sslmode: None
+[0m17:07:32.629354 [info ] [MainThread]:   sslcert: None
+[0m17:07:32.629994 [info ] [MainThread]:   sslkey: None
+[0m17:07:32.630730 [info ] [MainThread]:   sslrootcert: None
+[0m17:07:32.631459 [info ] [MainThread]:   application_name: dbt
+[0m17:07:32.632246 [info ] [MainThread]:   autocommit: False
+[0m17:07:32.632999 [info ] [MainThread]:   retries: 1
+[0m17:07:32.634054 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m17:07:32.773184 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m17:07:32.824481 [debug] [MainThread]: Using postgres connection "debug"
+[0m17:07:32.825216 [debug] [MainThread]: On debug: select 1 as id
+[0m17:07:32.825798 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:07:34.728664 [debug] [MainThread]: SQL status: SELECT 1 in 1.903 seconds
+[0m17:07:34.730406 [debug] [MainThread]: On debug: Close
+[0m17:07:34.731229 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m17:07:34.731857 [info ] [MainThread]: [32mAll checks passed![0m
+[0m17:07:34.732486 [info ] [MainThread]: Your new dbt project "fit_data" was created!
+Initialized new project in /home/rlbarbosa/Documents/Projects/fit-data-pipeline/fit_data/fit_data
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m17:07:34.737071 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 204.68839, "process_in_blocks": "63584", "process_kernel_time": 0.419973, "process_mem_max_rss": "136136", "process_out_blocks": "272", "process_user_time": 2.33585}
+[0m17:07:34.738086 [debug] [MainThread]: Command `dbt init` succeeded at 17:07:34.737932 after 204.69 seconds
+[0m17:07:34.738710 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m17:07:34.739352 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb003f415b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb002fdb650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb002fdce20>]}
+[0m17:07:34.740077 [debug] [MainThread]: Flushing usage events
+[0m17:07:35.446902 [debug] [MainThread]: An error was encountered while trying to flush usage events
