@@ -1,21 +1,62 @@
 
 version: 2
 
-models:
-  - name: my_first_dbt_model
-    description: "A starter dbt model"
-    columns:
-      - name: id
-        description: "The primary key for this table"
-        data_tests:
-          - unique
-          - not_null
+# Dados em .csv inseridos via seeds no schema public do PostgreSQL
+sources:
+  - name: public_raw
+    schema: public
+    tables:
+      - name: alunos
+      - name: matriculas
+      - name: pagamentos
+      - name: planos
 
-  - name: my_second_dbt_model
-    description: "A starter dbt model"
+models:
+
+  # --- CAMADA BRONZE ---
+  - name: bronze_alunos
+    description: "Cópia 1:1 dos dados de alunos do schema public"
+  - name: bronze_matriculas
+    description: "Cópia 1:1 dos dados de matriculas do schema public"
+  - name: bronze_pagamentos
+    description: "Cópia 1:1 dos dados de pagamentos do schema public"
+  - name: bronze_planos
+    description: "Cópia 1:1 dos dados de plano do schema public"
+
+  # --- CAMADA SILVER ---
+  - name: dim_alunos
+    description: "Dimensão - Dados cadastrais mais atributos dos alunos"
     columns:
-      - name: id
-        description: "The primary key for this table"
-        data_tests:
-          - unique
-          - not_null
+      - name: aluno_id
+        description: "identificação único dos alunos"
+    data_tests:
+      - unique
+      - not_null
+
+  - name: dim_planos
+    description: "Dimensão - Detalhes e valores dos planos"
+    columns:
+      - name: plano_id
+        description: "Identificação única dos planos disponíveis"
+    data_testes:
+      - unique
+      - not_null
+
+  # --- CAMADA GOLD ---
+  - name: ft_matriculas
+    description: "Fato com informações das matriculas, como também chaves de relacionamentos."
+    columns:
+      - name: matricula_id
+        description: "Identificação única da matrícula respectiva a um aluno"
+    data_testes:
+      - unique
+      - not_null
+
+  - name: ft_pagamentos
+    description: "Fato com as informações de pagamentos, como também chaves de relacionamentos"
+    columns:
+      - name: pagamentos_id
+        description: "Identificação de pagamentos"
+    data_testes:
+      - unique
+      - not_null
