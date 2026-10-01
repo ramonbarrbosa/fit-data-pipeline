@@ -75,3 +75,35 @@ Happy modeling!
 [0m17:07:34.739352 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb003f415b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb002fdb650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb002fdce20>]}
 [0m17:07:34.740077 [debug] [MainThread]: Flushing usage events
 [0m17:07:35.446902 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:53:24.197389 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5a602d1e80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5a620d0f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5a5ead7890>]}
+
+
+============================== 17:53:24.200943 | 02df53d5-3147-4628-b8a4-792d5c70d927 ==============================
+[0m17:53:24.200943 [info ] [MainThread]: Running with dbt=1.12.5
+[0m17:53:24.201441 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'cache_selected_only': 'False', 'hints_enabled': 'True', 'introspect': 'True', 'debug': 'False', 'write_json': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'invocation_command': 'dbt seed', 'printer_width': '80', 'warn_error': 'None', 'target_path': 'None', 'version_check': 'True', 'profiles_dir': '/home/rlbarbosa/.dbt', 'indirect_selection': 'eager', 'partial_parse': 'True', 'empty': 'False', 'maximum_seed_size_mib': '1', 'use_colors': 'True', 'fail_fast': 'False', 'quiet': 'False', 'log_path': 'logs', 'log_cache_events': 'False', 'no_print': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m17:53:24.201905 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/rlbarbosa/Documents/Projects/fit-data-pipeline/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m17:53:24.202977 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": false, "command_wall_clock_time": 0.06384055, "process_in_blocks": "80328", "process_kernel_time": 0.357714, "process_mem_max_rss": "119188", "process_out_blocks": "8", "process_user_time": 1.76359}
+[0m17:53:24.203487 [debug] [MainThread]: Command `dbt seed` failed at 17:53:24.203383 after 0.06 seconds
+[0m17:53:24.203817 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5a5ed17230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5a5e9a4050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5a5e980490>]}
+[0m17:53:24.204149 [debug] [MainThread]: Flushing usage events
+[0m17:53:25.119271 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:32:29.159841 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0a782e5e80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0a7a0d8f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0a76aef890>]}
+
+
+============================== 16:32:29.163711 | 73b03633-19f4-4b2d-acb3-4aebc3c122fa ==============================
+[0m16:32:29.163711 [info ] [MainThread]: Running with dbt=1.12.5
+[0m16:32:29.164229 [debug] [MainThread]: running dbt with arguments {'log_path': 'logs', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'write_json': 'True', 'quiet': 'False', 'invocation_command': 'dbt run', 'log_cache_events': 'False', 'introspect': 'True', 'partial_parse': 'True', 'use_colors': 'True', 'cache_selected_only': 'False', 'static_parser': 'True', 'indirect_selection': 'eager', 'debug': 'False', 'profiles_dir': '/home/rlbarbosa/.dbt', 'warn_error': 'None', 'printer_width': '80', 'no_print': 'None', 'empty': 'False', 'maximum_seed_size_mib': '1', 'log_format': 'default', 'hints_enabled': 'True', 'use_experimental_parser': 'False'}
+[0m16:32:29.164733 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/rlbarbosa/Documents/Projects/fit-data-pipeline/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m16:32:29.166263 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.06720706, "process_in_blocks": "72936", "process_kernel_time": 0.331896, "process_mem_max_rss": "119608", "process_out_blocks": "16", "process_user_time": 1.641378}
+[0m16:32:29.166778 [debug] [MainThread]: Command `dbt run` failed at 16:32:29.166663 after 0.07 seconds
+[0m16:32:29.167299 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0a76d2b230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0a769bc050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0a76998490>]}
+[0m16:32:29.167959 [debug] [MainThread]: Flushing usage events
+[0m16:32:29.839576 [debug] [MainThread]: An error was encountered while trying to flush usage events

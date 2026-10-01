@@ -1,0 +1,24 @@
+fitlife_dbt_project/
+├── models/
+│   ├── staging/           # Camada Bronze: Limpeza básica, cast de tipos e renomeação
+│   │   ├── stg_alunos.sql
+│   │   ├── stg_planos.sql
+│   │   ├── stg_matriculas.sql
+│   │   └── stg_pagamentos.sql
+│   ├── intermediate/      # Camada Silver: Joins complexos, regras de negócio e agregações
+│   │   ├── int_matriculas_com_planos.sql
+│   │   └── int_pagamentos_agregados.sql
+│   └── marts/             # Camada Gold: Fatos e Dimensões prontos para BI/Analistas
+│       ├── core/
+│       │   ├── dim_alunos.sql
+│       │   └── dim_planos.sql
+│       └── finance/
+│           ├── fct_matriculas.sql
+│           └── fct_pagamentos.sql
+├── snapshots/             # Snapshots para rastreamento de histórico
+│   └── snap_matriculas.sql
+├── tests/                 # Testes singulares em SQL
+│   └── assert_pagamento_valor_positivo.sql
+├── macros/                # Macros reutilizáveis em Jinja
+│   └── format_currency.sql
+└── README.md              # Explicação da arquitetura, DAG/Lineage do dbt e decisões técnicas
