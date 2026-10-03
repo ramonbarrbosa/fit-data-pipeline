@@ -38,7 +38,7 @@ models:
     columns:
       - name: plano_id
         description: "Identificação única dos planos disponíveis"
-    data_testes:
+    data_tests:
       - unique
       - not_null
 
@@ -48,7 +48,7 @@ models:
     columns:
       - name: matricula_id
         description: "Identificação única da matrícula respectiva a um aluno"
-    data_testes:
+    data_tests:
       - unique
       - not_null
 
@@ -57,6 +57,6 @@ models:
     columns:
       - name: pagamentos_id
         description: "Identificação de pagamentos"
-    data_testes:
+    data_tests:
       - unique
       - not_null

@@ -1,13 +1,19 @@
 {{ config(materialized='view', schema='gold') }}
 
-with source as (
-    select * from {{ref('bronze_pagamentos')}}
-    )
+with pagamentos as (
+    select * from {{ ref('bronze_pagamentos') }}
+),
+
+matriculas as (
+    select * from {{ ref('bronze_matriculas') }}
+)
 
 select 
-    pagamento_id,
-    matricula_id,
-    valor_pago,
-    cast(data_pagamento as date) as data_pagamento,
-    forma_pagamento
-from source
+    p.pagamento_id,
+    m.aluno_id,
+    m.plano_id,
+    p.valor_pago,
+    cast(p.data_pagamento as date) as data_pagamento,
+    p.forma_pagamento
+from pagamentos as p
+left join matriculas as m on p.matricula_id = m.matricula_id
